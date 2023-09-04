@@ -1,5 +1,6 @@
 function ButtonPress() {
     const f = document.forms["mathForm"].elements;
+    document.forms["mathForm"].elements["resultBox"].value = "";
     var int1, int2, int3;
     int1 = parseInt(f["int1"].value);
     int2 = parseInt(f["int2"].value);
@@ -25,17 +26,18 @@ Largest: ${lg}`;
 
 function CheckInts(int1, int2, int3) {
     var all_good = true;
-    if (int1 == "") {
+    console.log(int1)
+    if (isNaN(int1)) {
         all_good = false;
-        document.forms["mathForm"].elements["resultBox"].value = "Error: Integer 1 must be a number";
+        document.forms["mathForm"].elements["resultBox"].value += "Error: Integer 1 must be a number\n";
     }
-    if (int2 == "") {
+    if (isNaN(int2)) {
         all_good = false;
-        document.forms["mathForm"].elements["resultBox"].value = "Error: Integer 2 must be a number";
+        document.forms["mathForm"].elements["resultBox"].value += "Error: Integer 2 must be a number\n";
     }
-    if (int3 == "") {
+    if (isNaN(int3)) {
         all_good = false;
-        document.forms["mathForm"].elements["resultBox"].value = "Error: Integer 3 must be a number";
+        document.forms["mathForm"].elements["resultBox"].value += "Error: Integer 3 must be a number\n";
     }
     return all_good;
 }
