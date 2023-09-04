@@ -7,6 +7,7 @@
     <title>Homework 2</title>
 
     <link rel="stylesheet" href="../styles.css">
+    <script src="part2.js"></script>
 </head>
 <body>
     <div id="sidebar">
@@ -28,6 +29,16 @@
     </div>
     <div id="content">
         <h1>Homework 2 - Part 2</h1>
+        <form name="mathForm">
+            <label for="int1">Integer 1:</label><br>
+            <input type="number" id="int1" name="int1"><br>
+            <label for="int2">Integer 2:</label><br>
+            <input type="number" id="int2" name="int2"><br>
+            <label for="int3">Integer 3:</label><br>
+            <input type="number" id="int3" name="int3"><br>
+            <input type="button" onclick="ButtonPress()" value="Calculate"><br>
+            <textarea id="resultBox" name="resultBox" rows="8" cols="32"></textarea>
+        </form>
     </div>
 </body>
 </html>
