@@ -35,14 +35,8 @@ a {
     padding: 20px;
 }
 
-#sidebar > ul {
+#sidebar ul {
     list-style-type: none;
-}
-
-#sidebar > h1 {
-}
-
-#sidebar > li {
 }
 
 #content {
