@@ -6,7 +6,6 @@ function ButtonPress() {
     int2 = parseInt(f["int2"].value);
     int3 = parseInt(f["int3"].value);
     if (CheckInts(int1, int2, int3)) {
-        console.log("good");
         var sum, avg, prod, sm, lg; 
         sum = int1 + int2 + int3;
         avg = sum / 3.0;
@@ -19,8 +18,6 @@ Average: ${avg}
 Product: ${prod}
 Smallest: ${sm}
 Largest: ${lg}`;
-    } else {
-        console.log("fuck");
     }
 }
 
