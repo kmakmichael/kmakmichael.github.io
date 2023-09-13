@@ -12,13 +12,13 @@ function ButtonPress() {
         f["resultBox"].value = "Invalid Input!\nGrades must be positive numbers";
     } else {
         let letter = "";
-        if (grade >= 90.0) {
+        if (grade > 89.0) {
             letter = "A";
-        } else if (grade >= 80.0) {
+        } else if (grade > 79.0) {
             letter = "B";
-        } else if (grade >= 70.0) {
+        } else if (grade > 69.0) {
             letter = "C";
-        } else if (grade >= 60.0) {
+        } else if (grade > 59.0) {
             letter = "D: student must retake";
         } else {
             letter = "F: student must retake";
