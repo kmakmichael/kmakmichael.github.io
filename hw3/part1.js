@@ -29,9 +29,11 @@ function ButtonPress() {
 }
 
 function GetValidInt(el_name) {
+    elmnt.style.outlineColor = "black";
     elmnt = document.forms["grades_form"].elements[el_name];
     ival = parseInt(elmnt.value);
     if (isNaN(ival)) {
+        elmnt.style.outlineColor = "red";
         return -1;
     }
     return ival;
