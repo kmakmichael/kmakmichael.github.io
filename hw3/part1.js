@@ -3,11 +3,11 @@ function ButtonPress() {
     f["resultBox"].value = "";
     let hw, mdt, fnl, prt;
     hw = GetValidInt("hw_avg");
-    mdt = parseInt(f["midterm"].value);
-    fnl = parseInt(f["final"].value);
-    prt = parseInt(f["participation"].value);
+    mdt = GetValidInt("midterm");
+    fnl = GetValidInt("final");
+    prt = GetValidInt("participation");
 
-    let grade = (0.5 * hw_avg) + (0.2 * mdt) + (0.2 * fnl) + (0.1 * prt);
+    let grade = (0.5 * hw) + (0.2 * mdt) + (0.2 * fnl) + (0.1 * prt);
     if (grade < 0.0) {
         f["resultBox"].value = "Invalid Input!";
     } else {
@@ -25,20 +25,6 @@ function ButtonPress() {
         }
         // ceil to be a bit nice
         f["resultBox"].value = Math.ceil(grade).toString().concat(" ", letter);
-    }
-    if (CheckInts(int1, int2, int3)) {
-        var sum, avg, prod, sm, lg; 
-        sum = int1 + int2 + int3;
-        avg = sum / 3.0;
-        prod = int1 * int2 * int3;
-        sm = Math.min(int1, int2, int3);
-        lg = Math.max(int1, int2, int3);
-        document.forms["mathForm"].elements["resultBox"].value =
-`Sum: ${sum}
-Average: ${avg}
-Product: ${prod}
-Smallest: ${sm}
-Largest: ${lg}`;
     }
 }
 
