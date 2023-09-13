@@ -9,7 +9,7 @@ function ButtonPress() {
 
     let grade = (0.5 * hw) + (0.2 * mdt) + (0.2 * fnl) + (0.1 * prt);
     if (grade < 0.0) {
-        f["resultBox"].value = "Invalid Input!\nGradesMust be positive numbers";
+        f["resultBox"].value = "Invalid Input!\nGrades must be positive numbers";
     } else {
         let letter = "";
         if (grade >= 90.0) {
