@@ -24,7 +24,7 @@ function ButtonPress() {
             letter = "F: student must retake";
         }
         // ceil to be a bit nice
-        f["resultBox"].value = toString(Math.ceil(grade)).concat(" ", letter);
+        f["resultBox"].value = Math.ceil(grade).toString().concat(" ", letter);
     }
     if (CheckInts(int1, int2, int3)) {
         var sum, avg, prod, sm, lg; 
