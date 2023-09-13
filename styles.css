@@ -17,11 +17,11 @@ div {
     background-color: #1a2743;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, th {
     color: #fa7878;
 }
 
-p, ul, li, label {
+p, ul, li, label, td {
     color: #b5f5ff;
 }
 
