@@ -9,7 +9,7 @@ function ButtonPress() {
 
     let grade = (0.5 * hw) + (0.2 * mdt) + (0.2 * fnl) + (0.1 * prt);
     if (grade < 0.0) {
-        f["resultBox"].value = "Invalid Input!";
+        f["resultBox"].value = "Invalid Input!\nGradesMust be positive numbers";
     } else {
         let letter = "";
         if (grade >= 90.0) {
@@ -29,11 +29,11 @@ function ButtonPress() {
 }
 
 function GetValidInt(el_name) {
-    elmnt.style.outline = "0px solid black";
+    // elmnt.style.outline = "0px solid black";
     elmnt = document.forms["grades_form"].elements[el_name];
     ival = parseInt(elmnt.value);
     if (isNaN(ival)) {
-        elmnt.style.outline = "2px dotted red";
+        // elmnt.style.outline = "2px dotted red";
         return -1;
     }
     return ival;
