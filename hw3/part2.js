@@ -1,6 +1,6 @@
 
 var prices = [20.99, 12.75, 9.95, 35.89];
-var fmt_op = {style: 'currency', currency: 'USD', minimumFractionDigits: 3}
+var fmt_op = {style: 'currency', currency: 'USD', minimumFractionDigits: 2}
 var fmt = new Intl.NumberFormat("en-US", fmt_op)
 
 function ButtonSubmit() {
