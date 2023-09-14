@@ -29,8 +29,8 @@ function ProcessItem(i) {
         return ["ERR", "ERR"]
     }
     f[`i${i}_qty`].value = qty;
-    f[`i${i}_tot`].value = qty * prices[qty-1];
-    return [qty, qty * prices[qty-1]];
+    f[`i${i}_tot`].value = qty * prices[i-1];
+    return [qty, qty * prices[i-1]];
 }
 
 function ClearItem(i) {
