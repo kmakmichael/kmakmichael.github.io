@@ -36,14 +36,14 @@ function ProcessItem(i) {
 }
 
 function ClearItem(i) {
-    f[`i${i}_qty`].value = "";
-    f[`i${i}_qty`].value = "";
+    document.forms["sales_form"].elements[`i${i}_qty`].value = "";
+    document.forms["sales_form"].elements[`i${i}_qty`].value = "";
 }
 
 function ButtonClear() {
     ClearItem(1)
-    f["tot"].value = ""
-    f["earnings"].value = ""
+    document.forms["sales_form"].elements["tot"].value = ""
+    document.forms["sales_form"].elements["earnings"].value = ""
 }
 
 function GetValidInt(el_name) {
