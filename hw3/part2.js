@@ -22,20 +22,20 @@ function ButtonSubmit() {
 
 function ProcessItem(i) {
     let f = document.forms["sales_form"].elements;
-    let qty = GetValidInt("q_item${i}");
+    let qty = GetValidInt(`q_item${i}`);
     if (qty < 0) {
-        f["i${i}_qty"].value = "ERR";
-        f["i${i}_tot"].value = "ERR";
+        f[`i${i}_qty`].value = "ERR";
+        f[`i${i}_tot`].value = "ERR";
         return ["ERR", "ERR"]
     }
-    f["i${i}_qty"].value = qty;
-    f["i${i}_tot"].value = qty * prices[qty-1];
+    f[`i${i}_qty`].value = qty;
+    f[`i${i}_tot`].value = qty * prices[qty-1];
     return [qty, qty * prices[qty-1]];
 }
 
 function ClearItem(i) {
-    f["i${i}_qty"].value = "";
-    f["i${i}_qty"].value = "";
+    f[`i${i}_qty`].value = "";
+    f[`i${i}_qty`].value = "";
 }
 
 function ButtonClear() {
