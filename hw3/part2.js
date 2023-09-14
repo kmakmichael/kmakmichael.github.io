@@ -1,4 +1,4 @@
-var f = document.forms["grades_form"].elements;
+var f = document.forms["sales_form"].elements;
 var prices = [20.99, 12.75, 9.95, 35.89];
 
 function ButtonSubmit() {
@@ -44,7 +44,7 @@ function ButtonClear() {
 
 function GetValidInt(el_name) {
     // elmnt.style.outline = "0px solid black";
-    elmnt = document.forms["grades_form"].elements[el_name];
+    elmnt = document.forms["sales_form"].elements[el_name];
     ival = parseInt(elmnt.value);
     if (isNaN(ival)) {
         // elmnt.style.outline = "2px dotted red";
