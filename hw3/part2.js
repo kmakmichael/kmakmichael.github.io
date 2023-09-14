@@ -1,5 +1,7 @@
 
 var prices = [20.99, 12.75, 9.95, 35.89];
+var fmt_op = {style: 'currency', currency: 'USD', minimumFractionDigits: 3}
+var fmt = new Intl.NumberFormat("en-US", fmt_op)
 
 function ButtonSubmit() {
     let f = document.forms["sales_form"].elements;
@@ -17,7 +19,7 @@ function ButtonSubmit() {
     f["tot"].value = q1 + q2 + q3 + q4;
     let cut = 0.09 * (s1 + s2 + s3 + s4);
     let earnings = 500.00 + cut;
-    f["earnings"].value = earnings;
+    f["earnings"].value = fmt.format(earnings);
 }
 
 function ProcessItem(i) {
@@ -29,7 +31,7 @@ function ProcessItem(i) {
         return ["ERR", "ERR"]
     }
     f[`i${i}_qty`].value = qty;
-    f[`i${i}_tot`].value = qty * prices[i-1];
+    f[`i${i}_tot`].value = fmt.format(qty * prices[i-1]);
     return [qty, qty * prices[i-1]];
 }
 
