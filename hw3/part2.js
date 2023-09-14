@@ -26,8 +26,6 @@ function ProcessItem(i) {
     let f = document.forms["sales_form"].elements;
     let qty = GetValidInt(`q_item${i}`);
     if (qty < 0) {
-        f[`i${i}_qty`].value = "ERR";
-        f[`i${i}_tot`].value = "ERR";
         return ["ERR", "ERR"]
     }
     f[`i${i}_qty`].value = qty;
@@ -49,7 +47,6 @@ function ButtonClear() {
 function GetValidInt(el_name) {
     // elmnt.style.outline = "0px solid black";
     elmnt = document.forms["sales_form"].elements[el_name];
-    console.log(el_name)
     ival = parseInt(elmnt.value);
     if (isNaN(ival)) {
         // elmnt.style.outline = "2px dotted red";
