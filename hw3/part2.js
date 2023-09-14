@@ -16,7 +16,7 @@ function ButtonSubmit() {
         return
 
     }
-    f["tot"].value = q1 + q2 + q3 + q4;
+    f["tot"].value = q1 + q2 + q3 + q4; // s1 + ? unclear
     let cut = 0.09 * (s1 + s2 + s3 + s4);
     let earnings = 500.00 + cut;
     f["earnings"].value = fmt.format(earnings);
