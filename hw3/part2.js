@@ -1,7 +1,8 @@
-var f = document.forms["sales_form"].elements;
+
 var prices = [20.99, 12.75, 9.95, 35.89];
 
 function ButtonSubmit() {
+    let f = document.forms["sales_form"].elements;
     let [q1,s1] = ProcessItem(1);
     let [q2,s2] = ProcessItem(2);
     let [q3,s3] = ProcessItem(3);
@@ -20,6 +21,7 @@ function ButtonSubmit() {
 }
 
 function ProcessItem(i) {
+    let f = document.forms["sales_form"].elements;
     let qty = GetValidInt("q_item${i}");
     if (qty < 0) {
         f["i${i}_qty"].value = "ERR";
