@@ -40,6 +40,9 @@ function ClearItem(i) {
 
 function ButtonClear() {
     ClearItem(1)
+    ClearItem(2)
+    ClearItem(3)
+    ClearItem(4)
     document.forms["sales_form"].elements["tot"].value = ""
     document.forms["sales_form"].elements["earnings"].value = ""
 }
