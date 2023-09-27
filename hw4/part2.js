@@ -17,7 +17,7 @@ function CompoundInterest(p, r, n) {
     return Math.pow(p * (r + 1), n);
 }
 function BuildTable(root, yrs, r, amount) {
-    console.log(`Building ${yrs}yr table @${rate.toFixed(3)}`);
+    console.log(`Building ${yrs}yr table @${r.toFixed(3)}`);
     let tbl = document.createElement("table");
 
     let tbody = document.createElement("tbody");
