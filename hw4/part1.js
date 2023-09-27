@@ -11,6 +11,9 @@ function DoThings() {
 }
 
 function FoldRangeFor(lower, upper, increment, operation) {
+    if (lower > upper) {
+        return "Invalid range"
+    }
     let result = lower;
     for (let i=lower + increment; i<=upper; i+= increment) {
         result = operation(result, i);
@@ -19,6 +22,9 @@ function FoldRangeFor(lower, upper, increment, operation) {
     return result;
 }
 function FoldRangeWhile(lower, upper, increment, operation) {
+    if (lower > upper) {
+        return "Invalid range"
+    }
     let result = lower;
     let i = lower + increment;
     while (i<=upper) {
