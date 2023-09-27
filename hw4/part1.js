@@ -11,7 +11,7 @@ function DoThings() {
 
 function Range(lower, upper, delta) {
     let range = [];
-    for (let i=lower; i <= upper; i1 += delta) {
+    for (let i=lower; i<=upper; i+=delta) {
         range.push(i);
         console.log(`adding ${i}`);
     }
