@@ -18,7 +18,6 @@ function CompoundInterest(p, r, n) {
     return p * Math.pow(r + 1, n);
 }
 function BuildTable(yrs, r, amount) {
-    console.log(`Building ${yrs}yr table @${r.toFixed(3)}`);
     let tbl = document.createElement("table");
 
     let tbody = document.createElement("tbody");
@@ -47,7 +46,7 @@ function CreateRow(year, amount, intrate) {
     am.innerHTML = amount.toLocaleString("en-US", { style: "currency", currency: "USD" });
     rw.appendChild(am);
     let ir = document.createElement("td");
-    ir.innerHTML = `${intrate.toFixed(3)}%`;
+    ir.innerHTML = `${(intrate * 100).toFixed(3)}%`;
     rw.appendChild(ir);
     return rw;
 }
