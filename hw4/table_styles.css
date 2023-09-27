@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-div#table thead th {
+div#table th {
     background-color: ivory;
 }
 div#table_div tr td {
