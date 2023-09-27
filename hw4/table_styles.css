@@ -6,6 +6,6 @@ div#table tr th {
 div#table_div tr td {
     background-color: rgb(158, 69, 84);
 }
-div#table_div tr:nth-of-type(2) td {
+div#table_div tr:nth-of-type(2n) td {
     background-color: rgb(102, 39, 162);
 }
