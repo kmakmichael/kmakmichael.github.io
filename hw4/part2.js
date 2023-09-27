@@ -9,14 +9,14 @@ var principal = 1000.00
 function DoThings() {
     let el_div = document.getElementById("table_div");
     for (let r = r_min; r <= r_max; r+=r_step) {
-        BuildTable(el_div, num_years, r, principal);
+        el_div.appendChild(BuildTable(num_years, r, principal));
     }
 }
 
 function CompoundInterest(p, r, n) {
     return Math.pow(p * (r + 1), n);
 }
-function BuildTable(root, yrs, r, amount) {
+function BuildTable(yrs, r, amount) {
     console.log(`Building ${yrs}yr table @${r.toFixed(3)}`);
     let tbl = document.createElement("table");
 
@@ -33,7 +33,7 @@ function BuildTable(root, yrs, r, amount) {
     tbl.appendChild(CreateThead());
     tbl.appendChild(tbody);
     tbl.appendChild(tfoot);
-    root.appendChild(tbl);
+    return tbl;
 }
 
 function CreateRow(year, amount, intrate) {
