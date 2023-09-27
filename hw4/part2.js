@@ -10,8 +10,32 @@ function DoThings() {
 function BuildTable(root, yrs, rate) {
     console.log(`Building ${yrs}yr table @{rate.toFixed(2)}`);
     let tbl = document.createElement("table");
+    
+    let tbody = document.createElement("tbody");
+    for (let i = 1; i < yrs; i++) {
+        tbody.appendChild(CreateRow(i, 1234.5678, rate))
+    }
+    let tfoot = document.createElement("tfoot");
+    tfoot.appendChild(CreateRow(yrs, 2345.6789, rate));
 
+    tbl.appendChild(CreateColGroup());
+    tbl.appendChild(CreateThead());
+    tbl.appendChild(tbody);
+    tbl.appendChild(tfoot);
     root.appendChild(tbl);
+}
+
+function CreateRow(year, amount, intrate) {
+    let rw = document.createElement("tr");
+
+    let yr = document.createElement("td");
+    yr.innerHTML = year;
+    rw.appendChild(yr);
+    let ir = document.createElement("td");
+    ir.innerHTML = `${intrate.toFixed(3)}%`;
+    let am = document.createElement("td");
+    am.innerHTML = amount.toLocaleString("en-US", { style: "currency", currency: "USD" });
+    return rw;
 }
 
 function CreateColGroup() {
@@ -37,5 +61,4 @@ function CreateThead() {
     tr.appendChild(th_3);
 
     return t_head;
-
 }
