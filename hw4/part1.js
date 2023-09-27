@@ -11,16 +11,16 @@ function DoThings() {
 }
 
 function FoldRangeFor(lower, upper, increment, operation) {
-    let result = 0;
-    for (let i=lower; i<=upper; i+= increment) {
+    let result = lower;
+    for (let i=lower + increment; i<=upper; i+= increment) {
         result = operation(result, i);
     }
     console.log(`for: got ${result} from ${operation}`)
     return result;
 }
 function FoldRangeWhile(lower, upper, increment, operation) {
-    let result = 0;
-    let i = lower;
+    let result = lower;
+    let i = lower + increment;
     while (i<=upper) {
         result = operation(result, i);
         i += increment;
