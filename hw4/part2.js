@@ -27,7 +27,7 @@ function BuildTable(root, yrs, r, amount) {
         tbody.appendChild(CreateRow(i, p, r))
     }
     let tfoot = document.createElement("tfoot");
-    tfoot.appendChild(CreateRow(yrs, CompoundInterest(p, r, i), r));
+    tfoot.appendChild(CreateRow(yrs, CompoundInterest(p, r, yrs), r));
 
     tbl.appendChild(CreateColGroup());
     tbl.appendChild(CreateThead());
