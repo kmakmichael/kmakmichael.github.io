@@ -4,35 +4,27 @@ function DoThings() {
     let plus = (a, b) => a + b;
     let mult = (a, b) => a * b;
 
-    var el_sum1 = document.getElementById("sum_1");
-    el_sum1.innerHTML = FoldFor(5, 25, 4, plus).toLocaleString("en-US");
-    var el_prd1 = document.getElementById("prd_1");
-    el_prd1.innerHTML = FoldFor(5, 25, 4, mult).toLocaleString("en-US");
-
-    let r_2 = Range(3, 18, 3);
-    var el_sum2 = document.getElementById("sum_2");
-    el_sum2.innerHTML = Sum(r_2).toLocaleString("en-US");
-    var el_prd2 = document.getElementById("prd_2");
-    el_prd2.innerHTML - Product(r_2).toLocaleString("en-US")
+    document.getElementById("sum_1").innerHTML = FoldRangeFor(5, 25, 4, plus).toLocaleString("en-US");
+    document.getElementById("prd_1").innerHTML = FoldRangeFor(5, 25, 4, mult).toLocaleString("en-US");
+    document.getElementById("sum_2").innerHTML = FoldRangeWhile(3, 18, 3, plus).toLocaleString("en-US");
+    document.getElementById("prd_2").innerHTML = FoldRangeWhile(3, 18, 3, mult).toLocaleString("en-US");
 }
-function FoldFor(lower, upper, increment, operation) {
+
+function FoldRangeFor(lower, upper, increment, operation) {
     let result = 0;
     for (let i=lower; i<=upper; i+= increment) {
         result = operation(result, i);
     }
+    console.log(`for: got ${result} from ${operation}`)
     return result;
 }
-
-function Range(lower, upper, delta) {
-    let range = [];
-    for (let i=lower; i<=upper; i+=delta) {
-        range.push(i);
+function FoldRangeWhile(lower, upper, increment, operation) {
+    let result = 0;
+    let i = lower;
+    while (i<=upper) {
+        result = operation(result, i);
+        i += increment;
     }
-    return range;
-}
-function Product(arr) {
-    return 123456789;
-}
-function Sum(arr) {
-    return 987654321;
+    console.log(`while: got ${result} from ${operation}`)
+    return result;
 }
