@@ -9,7 +9,7 @@ var principal = 1000.00
 function DoThings() {
     let el_div = document.getElementById("table_div");
     for (let r = r_min; r <= r_max; r+=r_step) {
-        BuildTable(el_div, num_years, r, amount);
+        BuildTable(el_div, num_years, r, principal);
     }
 }
 
