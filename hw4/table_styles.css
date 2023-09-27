@@ -3,9 +3,9 @@
 div#table tr {
     background-color: ivory;
 }
-div#table_div td {
-    background-color: pink;
+div#table_div tr td {
+    background-color: rgb(158, 69, 84);
 }
-div#table_div td:nth-of-type(2) {
-    background-color: blueviolet;
+div#table_div tr:nth-of-type(2) td {
+    background-color: rgb(102, 39, 162);
 }
