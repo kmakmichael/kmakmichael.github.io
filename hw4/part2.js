@@ -8,7 +8,7 @@ function DoThings() {
 }
 
 function BuildTable(root, yrs, rate) {
-    console.log(`Building ${yrs}yr table @{rate.toFixed(2)}`);
+    console.log(`Building ${yrs}yr table @${rate.toFixed(3)}`);
     let tbl = document.createElement("table");
 
     let tbody = document.createElement("tbody");
