@@ -10,6 +10,7 @@ function DoThings() {
     let el_div = document.getElementById("table_div");
     for (let r = r_min; r <= r_max; r+=r_step) {
         el_div.appendChild(BuildTable(num_years, r, principal));
+        el_div.appendChild(document.createElement("br"))
     }
 }
 
