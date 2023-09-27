@@ -18,8 +18,9 @@ function DoThings() {
 function FoldFor(lower, upper, increment, operation) {
     let result = 0;
     for (let i=lower; i<=upper; i+= increment) {
-        i = operation(result, i);
+        result = operation(result, i);
     }
+    return result;
 }
 
 function Range(lower, upper, delta) {
