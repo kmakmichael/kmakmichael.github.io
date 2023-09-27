@@ -31,12 +31,12 @@ function CreateRow(year, amount, intrate) {
     let yr = document.createElement("td");
     yr.innerHTML = year;
     rw.appendChild(yr);
-    let ir = document.createElement("td");
-    ir.innerHTML = `${intrate.toFixed(3)}%`;
-    rw.appendChild(ir);
     let am = document.createElement("td");
     am.innerHTML = amount.toLocaleString("en-US", { style: "currency", currency: "USD" });
     rw.appendChild(am);
+    let ir = document.createElement("td");
+    ir.innerHTML = `${intrate.toFixed(3)}%`;
+    rw.appendChild(ir);
     return rw;
 }
 
