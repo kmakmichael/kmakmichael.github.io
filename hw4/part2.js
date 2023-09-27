@@ -24,7 +24,7 @@ function BuildTable(yrs, r, amount) {
     let p = amount;
     for (let i = 1; i < yrs; i++) {
         // p = CompoundInterest(p, r, i);
-        tbody.appendChild(CreateRow(i, p, r))
+        tbody.appendChild(CreateRow(i, CompoundInterest(p, r, i), r))
     }
     let tfoot = document.createElement("tfoot");
     tfoot.appendChild(CreateRow(yrs, CompoundInterest(p, r, yrs), r));
