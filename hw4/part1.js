@@ -18,7 +18,6 @@ function FoldRangeFor(lower, upper, increment, operation) {
     for (let i=lower + increment; i<=upper; i+= increment) {
         result = operation(result, i);
     }
-    console.log(`for: got ${result} from ${operation}`)
     return result;
 }
 function FoldRangeWhile(lower, upper, increment, operation) {
@@ -31,6 +30,5 @@ function FoldRangeWhile(lower, upper, increment, operation) {
         result = operation(result, i);
         i += increment;
     }
-    console.log(`while: got ${result} from ${operation}`)
     return result;
 }
