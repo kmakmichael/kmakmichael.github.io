@@ -46,7 +46,7 @@ function CreateRow(year, amount, intrate) {
     am.innerHTML = amount.toLocaleString("en-US", { style: "currency", currency: "USD" });
     rw.appendChild(am);
     let ir = document.createElement("td");
-    ir.innerHTML = `${(intrate * 100).toFixed(3)}%`;
+    ir.innerHTML = `${intrate.toFixed(3)}`;
     rw.appendChild(ir);
     return rw;
 }
