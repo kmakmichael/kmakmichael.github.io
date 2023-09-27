@@ -10,7 +10,7 @@ function DoThings() {
 function BuildTable(root, yrs, rate) {
     console.log(`Building ${yrs}yr table @{rate.toFixed(2)}`);
     let tbl = document.createElement("table");
-    
+
     let tbody = document.createElement("tbody");
     for (let i = 1; i < yrs; i++) {
         tbody.appendChild(CreateRow(i, 1234.5678, rate))
@@ -33,8 +33,10 @@ function CreateRow(year, amount, intrate) {
     rw.appendChild(yr);
     let ir = document.createElement("td");
     ir.innerHTML = `${intrate.toFixed(3)}%`;
+    rw.appendChild(ir);
     let am = document.createElement("td");
     am.innerHTML = amount.toLocaleString("en-US", { style: "currency", currency: "USD" });
+    rw.appendChild(am);
     return rw;
 }
 
