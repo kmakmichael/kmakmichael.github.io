@@ -1,22 +1,33 @@
 window.onload = DoThings;
 
+var num_years = 5;
+var r_min = 0.05;
+var r_max = 0.07;
+var r_step = 0.01;
+var principal = 1000.00
+
 function DoThings() {
     let el_div = document.getElementById("table_div");
-    BuildTable(el_div, 5, 0.05);
-    BuildTable(el_div, 5, 0.06);
-    BuildTable(el_div, 5, 0.07);
+    for (let r = r_min; r <= r_max; r+=r_step) {
+        BuildTable(el_div, num_years, r, amount);
+    }
 }
 
-function BuildTable(root, yrs, rate) {
+function CompoundInterest(p, r, n) {
+    return Math.pow(p * (r + 1), n);
+}
+function BuildTable(root, yrs, r, amount) {
     console.log(`Building ${yrs}yr table @${rate.toFixed(3)}`);
     let tbl = document.createElement("table");
 
     let tbody = document.createElement("tbody");
+    let p = amount;
     for (let i = 1; i < yrs; i++) {
-        tbody.appendChild(CreateRow(i, 1234.5678, rate))
+        p = CompoundInterest(p, r, i)
+        tbody.appendChild(CreateRow(i, p, r))
     }
     let tfoot = document.createElement("tfoot");
-    tfoot.appendChild(CreateRow(yrs, 2345.6789, rate));
+    tfoot.appendChild(CreateRow(yrs, CompoundInterest(p, r, i), r));
 
     tbl.appendChild(CreateColGroup());
     tbl.appendChild(CreateThead());
@@ -39,7 +50,6 @@ function CreateRow(year, amount, intrate) {
     rw.appendChild(ir);
     return rw;
 }
-
 function CreateColGroup() {
     let cg = document.createElement("colgroup");
     cg.appendChild(document.createElement("col"));
