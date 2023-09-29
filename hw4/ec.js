@@ -12,7 +12,8 @@ function DrawCube(sz) {
 }
 
 function ClearSpace() {
-    document.getElementById("cube").innerHTML = "<br>".repeat(10)
+    let cube_p = document.getElementById("cube");
+    cube_p.innerHTML = "<br />".repeat(10);
 }
 
 function ButtonClick() {
