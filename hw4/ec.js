@@ -1,5 +1,5 @@
 function DrawCube(sz) {
-    let ws = "&emsp;".repeat(sz-2) + "&nbsp;";
+    let ws = "&emsp;".repeat(sz-2) + "&ensp;";
     let edge = "*&nbsp;".repeat(sz-1) + "*<br />"
     let mid = "*" + ws + "*" + "<br />";
 
