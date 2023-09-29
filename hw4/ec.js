@@ -1,6 +1,6 @@
 function DrawCube(sz) {
-    let ws = "&ensp;".repeat(sz-2) + "&nbsp;";
-    let edge = "*&nbsp;".repeat(sz-1) + "*<br />"
+    let ws = "  ".repeat(sz-2) + " ";
+    let edge = "* ".repeat(sz-1) + "*<br />"
     let mid = "*" + ws + "*" + "<br />";
 
     let cube_p = document.getElementById("cube");
