@@ -14,6 +14,8 @@ function DrawCube(sz) {
 function ClearSpace() {
     let cube_p = document.getElementById("cube");
     cube_p.innerHTML = "<br />".repeat(10);
+    parseFloat(document.forms["cube_form"].elements["cube_size"].value = "";
+    
 }
 
 function ButtonClick() {
