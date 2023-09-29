@@ -1,8 +1,8 @@
-window.onload = Setup()
+// window.onload = Setup();
 
 function Setup() {
-    document.forms["cube_form"].elements["clear_btn"].addEventListener("click", ClearSpace)
-    document.forms["cube_form"].elements["draw_btn"].addEventListener("click", DrawCube)
+    document.forms["cube_form"].elements["clear_btn"].addEventListener("click", ClearSpace);
+    document.forms["cube_form"].elements["draw_btn"].addEventListener("click", DrawCube);
 }
 
 function DrawCube(sz) {
@@ -21,7 +21,7 @@ function DrawCube(sz) {
 function ClearSpace() {
     let cube_p = document.getElementById("cube");
     cube_p.innerHTML = "<br />".repeat(10);
-    parseFloat(document.forms["cube_form"].elements["cube_size"].value = "";
+    parseFloat(document.forms["cube_form"].elements["cube_size"].value = "");
     
 }
 
