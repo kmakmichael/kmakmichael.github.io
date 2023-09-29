@@ -3,6 +3,7 @@ function DrawCube(sz) {
     let edge = "* ".repeat(sz-1) + "*<br />"
     let mid = "*" + ws + "*" + "<br />";
 
+    let cube_p = document.getElementById("cube");
     cube_p.innerHTML = "";
     cube_p.innerHTML += edge;
     cube_p.innerHTML += mid.repeat(sz - 2);
