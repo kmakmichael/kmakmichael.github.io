@@ -1,3 +1,10 @@
+window.onload = Setup()
+
+function Setup() {
+    document.forms["cube_form"].elements["clear_btn"].addEventListener("click", ClearSpace)
+    document.forms["cube_form"].elements["draw_btn"].addEventListener("click", DrawCube)
+}
+
 function DrawCube(sz) {
     let ws = "  ".repeat(sz-2) + " ";
     let edge = "* ".repeat(sz-1) + "*<br />"
