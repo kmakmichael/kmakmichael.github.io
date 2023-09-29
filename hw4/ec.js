@@ -1,8 +1,8 @@
 function ButtonClick() {
-    let sz = parseFloat(document.forms["cube_form"].elements["cube_size"]);
+    let sz = parseFloat(document.forms["cube_form"].elements["cube_size"].value);
     let cube_p = document.getElementById("cube");
     if (Number.isNaN(sz)) {
-        p.innerHTML = "Invalid input (must be a number)";
+        cube_p.innerHTML = "Invalid input (must be a number)";
         return;
     }
     if (sz < 2 || sz > 10) {
