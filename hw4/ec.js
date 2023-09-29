@@ -11,6 +11,10 @@ function DrawCube(sz) {
     cube_p.innerHTML += "<br />".repeat(10 - sz);
 }
 
+function ClearSpace() {
+    document.getElementById("cube").innerHTML = "<br>".repeat(10)
+}
+
 function ButtonClick() {
     let sz = parseFloat(document.forms["cube_form"].elements["cube_size"].value);
     let cube_p = document.getElementById("cube");
