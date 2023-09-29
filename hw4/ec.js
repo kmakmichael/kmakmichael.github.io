@@ -12,6 +12,13 @@ function ButtonClick() {
     DrawCube(sz);
 }
 
-function DrawCUbe(sz) {
-    console.log(`cube: ${sz}`)
+function DrawCube(sz) {
+    let ws = "&ensp;".repeat(sz) + "&nbsp;";
+    let edge = "* ".repeat(sz-1) + "*<br />"
+    let mid = "*" + ws + "*" + "<br />";
+
+    cube_p.innerHTML = "";
+    cube_p.innerHTML += edge;
+    cube_p.innerHTML += mid.repeat(sz - 2);
+    cube_p.innerHTML += edge;
 }
