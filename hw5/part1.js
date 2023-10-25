@@ -10,12 +10,18 @@ $("form").on("submit", function(event) {
     if ($(this).find("input[name=browsers]:checked")) {
         msg += "Please select at least one browser<br />";
     }
-    if ($(this).find("input[name=movie]").val() == "") {
+    if ($(this).find("select[name=movie]").val() == "") {
         msg += "Please select a movie genre<br />";
     }
     if (msg == "") {
-        $("p.form_output").text("Thanks, your data was submitted.");
+        $("p#form_output").text("Thanks, your data was submitted.");
     } else {
-        $("p.form_output").text("Form data not submitted. Errors:<br />" + msg);
+        $("p#form_output").text("Form data not submitted. Errors:<br />" + msg);
     }
 });
+
+function ClearForm() {
+    $("form").find("input[name=full_name]").text("");
+    $("form").find("input:checked").prop("checked", false);
+    $("form").find("select[name=movie]").val("");
+}
