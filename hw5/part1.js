@@ -14,9 +14,9 @@ $("form").on("submit", function(event) {
         msg += "Please select a movie genre<br />";
     }
     if (msg == "") {
-        $("p#form_output").html("Thanks, your data was submitted.");
+        $("p#form_output").html("<b>Thanks, your data was submitted.</b>");
     } else {
-        $("p#form_output").html("Form data not submitted. Errors:<br />" + msg);
+        $("p#form_output").html("<b>Form data not submitted. Errors:</b><br />" + msg);
     }
     console.log($(this).find("input:checked"));
 });
