@@ -18,7 +18,6 @@ $("form").on("submit", function(event) {
     } else {
         $("p#form_output").html("<b>Form data not submitted. Errors:</b><br />" + msg);
     }
-    console.log($(this).find("input:checked"));
 });
 
 function ClearForm() {
