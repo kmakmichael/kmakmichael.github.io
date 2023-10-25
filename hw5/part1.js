@@ -14,10 +14,11 @@ $("form").on("submit", function(event) {
         msg += "Please select a movie genre<br />";
     }
     if (msg == "") {
-        $("p#form_output").text("Thanks, your data was submitted.");
+        $("p#form_output").html("Thanks, your data was submitted.");
     } else {
-        $("p#form_output").text("Form data not submitted. Errors:<br />" + msg);
+        $("p#form_output").html("Form data not submitted. Errors:<br />" + msg);
     }
+    print($(this).find("input:checked"));
 });
 
 function ClearForm() {
