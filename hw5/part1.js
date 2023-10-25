@@ -1,8 +1,21 @@
 $("form").on("submit", function(event) {
     event.preventDefault();
-    let clean = true;
-    clean = $(this).find('[name=full_name]').val() != "";
-    console.log()
-    console.log($(this).find('input[name=browsers]:checked').val());
-    console.log(clean);
+    let msg = ""
+    if ($(this).find('[name=full_name]').val() == "") {
+        msg += "Please enter a name<br>";
+    }
+    if ($(this).find("input[name=age_group]:checked")) {
+        msg += "Please select an age<br />";
+    }
+    if ($(this).find("input[name=browsers]:checked")) {
+        msg += "Please select at least one browser<br />";
+    }
+    if ($(this).find("input[name=movie]").val() == "") {
+        msg += "Please select a movie genre<br />";
+    }
+    if (msg == "") {
+        $("p.form_output").text("Thanks, your data was submitted.");
+    } else {
+        $("p.form_output").text("Form data not submitted. Errors:<br />" + msg);
+    }
 });
