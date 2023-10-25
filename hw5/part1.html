@@ -30,7 +30,35 @@
     </div>
     <div id="content">
         <h1>Thing</h1>
-        
+        <form name="p1form">
+            <input type="button" onclick="ClearForm()" value="Clear Form"><br />
+            <label for="name_box">Full Name</label>
+            <input type="text" name="full_name" id="name_box"><br />
+            <label for="age_btn_lt">Less than 21</label>
+            <input type="radio" name="age_group" id="age_btn_lt" value="lt">
+            <label for="age_btn_bw">Between 21 and 50</label>
+            <input type="radio" name="age_group" id="age_btn_bw" value="bw">
+            <label for="age_btn_gt">Greater than 50</label>
+            <input type="radio" name="age_group" id="age_btn_gt" value="gt">
+            <label for="browsers_ff">Firefox</label>
+            <input type="checkbox" name="browsers" id="browsers_ff" value="ff">
+            <label for="browsers_eg">Edge</label>
+            <input type="checkbox" name="browsers" id="browsers_eg" value="eg">
+            <label for="browsers_ch">Chrome</label>
+            <input type="checkbox" name="browsers" id="browsers_ch" value="ch">
+            <label for="browsers_sf">Safari</label>
+            <input type="checkbox" name="browsers" id="browsers_sf" value="sf">
+            <select name="movie" id="movie_sel">
+                <option value=""></option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="docu">Documentary</option>
+                <option value="scifi">Science Fiction</option>
+            </select>
+            <input type="button" onclick="ButtonSubmit()" value="Submit"><br /><br />
+        </form>
+        <p id="form_output"></p>
         <a href="/hw5.html"><h3>Back to HW5</h3></a>
     </div>
 </body>
