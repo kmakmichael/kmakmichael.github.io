@@ -5,11 +5,9 @@ $("form").on("submit", function(event) {
         msg += "Please enter a name<br>";
     }
     if ($(this).find("input[name=age_group]:checked").length <= 0) {
-        console.log($(this).find("input[name=age_group]:checked"))
         msg += "Please select an age<br />";
     }
     if ($(this).find("input[name=browsers]:checked").length <= 0) {
-        console.log($(this).find("input[name=browsers]:checked"))
         msg += "Please select at least one browser<br />";
     }
     if ($(this).find("select[name=movie]").val() == "") {
