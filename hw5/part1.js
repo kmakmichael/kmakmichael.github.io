@@ -1,7 +1,7 @@
 $("form").on("submit", function(event) {
     event.preventDefault();
     let msg = ""
-    if ($(this).find('input[name=full_name]').val() == "") {
+    if ($(this).find("input[name=full_name]").val() == "") {
         msg += "Please enter a name<br>";
     }
     if ($(this).find("input[name=age_group]:checked").length <= 0) {
