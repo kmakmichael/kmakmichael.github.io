@@ -1,5 +1,5 @@
-DoThings();
+document.forms.state_form.submit.addEventListener("submit", FormSubmit);
 
-function DoThings() {
-    console.log("part 3");
+function FormSubmit() {
+    console.log("state submitted");
 }
