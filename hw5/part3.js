@@ -1,8 +1,5 @@
-document.forms.p3form.addEventListener("submit", FormSubmit);
-
-function FormSubmit(event) {
-    console.log("state submitted");
-    return false;
+function FormSubmit() {
+    console.log(document.forms.p3form.state_box.value);
 }
 
 function ClearForm() {
