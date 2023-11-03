@@ -21,6 +21,7 @@ function FormSubmit() {
     } else {
         fout.innerHTML = PrintStateInfo(idx);
     }
+    return false; // stop submission events
 }
 
 function ClearForm() {
