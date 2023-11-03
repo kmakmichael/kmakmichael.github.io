@@ -12,7 +12,13 @@ var state_info_lower = state_info.map((r) => {return [r[0].toLowerCase(), r[1].t
 
 var fout = document.querySelector("p#form_output");
 
-function FormSubmit() {
+// process the form when you press enter instead of submitting it
+function FormSubmit(event) {
+    event.preventDefault();
+    FormProcess();
+}
+
+function FormProcess() {
     let stateval = document.forms.p3form.state_box.value;
     let idx = HaveStateInfo(stateval.toLowerCase());
     if (idx < 0) {
@@ -21,7 +27,6 @@ function FormSubmit() {
     } else {
         fout.innerHTML = PrintStateInfo(idx);
     }
-    return false; // stop submission events
 }
 
 function ClearForm() {
