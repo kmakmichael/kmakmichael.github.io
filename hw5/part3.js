@@ -42,12 +42,12 @@ function ListStates() {
     for (let i = 0; i < state_info.length-1; i++) {
         stl += "<b>" + state_info[i][1] + "</b>, ";
     }
-    stl += "and <b>" + state_info[state_info.length-1][1] + "</b>, "
+    stl += "and <b>" + state_info[state_info.length-1][1] + "</b>";
     return stl;
 }
 
 function PrintStateInfo(idx) {
-    for (i in state_info[idx]) {
-        console.log(i);
+    for (let i = 0; i < state_info[idx].length; i++) {
+        console.log(state_info[idx][i]);
     }
 }
