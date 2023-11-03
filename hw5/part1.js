@@ -24,4 +24,5 @@ function ClearForm() {
     $("form").find("input[name=full_name]").val("");
     $("form").find("input:checked").prop("checked", false);
     $("form").find("select[name=movie]").val("");
+    $("p#form_output").html("");
 }
