@@ -8,14 +8,12 @@ var state_info = [
     ["CO", "Colorado", "Denver", 5758736]
 ];
 
-var state_info_lower = state_info.map((r) => {[r[0].toLowerCase(), r[1].toLowerCase()]});
-for (r in state_info_lower) {
-    console.log(r[0] + "," + r[1]);
-}
+var state_info_lower = state_info.map((r) => {return [r[0].toLowerCase(), r[1].toLowerCase()]});
 
 function FormSubmit() {
     let stateval = document.forms.p3form.state_box.value;
     let idx = HaveStateInfo(stateval.toLowerCase());
+    console.log("found it at " + idx);
 }
 
 function ClearForm() {
@@ -24,7 +22,8 @@ function ClearForm() {
 
 function HaveStateInfo(st) {
     for (let r = 0; r < state_info_lower.length; r++) {
-        if (st.localeCompare(r[0]) == 0 || st.localeCompare(r[1]) == 0) {
+        let s = state_info_lower[r];
+        if (st.localeCompare(s[0]) == 0 || st.localeCompare(s[1]) == 0) {
             return r;
         }
     }
