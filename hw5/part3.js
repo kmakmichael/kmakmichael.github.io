@@ -42,7 +42,7 @@ function ListStates() {
     for (let i = 0; i < state_info.length-1; i++) {
         stl += "<b>" + state_info[i][1] + "</b>, ";
     }
-    stl += "and <b>" + state_info[i][1] + "</b>, "
+    stl += "and <b>" + state_info[state_info.length-1][1] + "</b>, "
     return stl;
 }
 
