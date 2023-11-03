@@ -13,7 +13,7 @@ var state_info_lower = state_info.map((r) => {return [r[0].toLowerCase(), r[1].t
 var fout = document.querySelector("p#form_output");
 
 // process the form when you press enter instead of submitting it
-function FormSubmit(event) {
+function FormSubmit() {
     event.preventDefault();
     FormProcess();
 }
