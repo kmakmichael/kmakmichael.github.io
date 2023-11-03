@@ -19,12 +19,13 @@ function FormSubmit() {
         let apology = "Sorry, we do not have information about this state! We only have information about ";
         fout.innerHTML = apology + ListStates();
     } else {
-        PrintStateInfo(idx);
+        fout.innerHTML = PrintStateInfo(idx);
     }
 }
 
 function ClearForm() {
     document.forms.p3form.reset();
+    fout.innerHTML = "";
 }
 
 function HaveStateInfo(st) {
@@ -47,7 +48,13 @@ function ListStates() {
 }
 
 function PrintStateInfo(idx) {
-    for (let i = 0; i < state_info[idx].length; i++) {
-        console.log(state_info[idx][i]);
+    let sinfo =  state_info[idx];
+    let istr = "Thanks for your inquiry, here is the information you requested:<br />";
+    for (let i = 0; i <.length; i++) {
+        istr += "State abbr = " + sinfo[0] + "<br />";
+        istr += "State name = " + sinfo[1] + "<br />";
+        istr += "Capital = " + sinfo[2] + "<br />";
+        istr += "Population" + sinfo[3] + "<br />";
     }
+    return istr;
 }
