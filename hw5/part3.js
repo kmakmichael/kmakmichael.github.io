@@ -10,10 +10,17 @@ var state_info = [
 
 var state_info_lower = state_info.map((r) => {return [r[0].toLowerCase(), r[1].toLowerCase()]});
 
+var fout = document.querySelector("p#form_output");
+
 function FormSubmit() {
     let stateval = document.forms.p3form.state_box.value;
     let idx = HaveStateInfo(stateval.toLowerCase());
-    console.log("found it at " + idx);
+    if (idx < 0) {
+        let apology = "Sorry, we do not have information about this state! We only have information about ";
+        fout.innerHTML = apology + ListStates();
+    } else {
+        PrintStateInfo(idx);
+    }
 }
 
 function ClearForm() {
@@ -28,4 +35,19 @@ function HaveStateInfo(st) {
         }
     }
     return -1;
+}
+
+function ListStates() {
+    var stl = "";
+    for (let i = 0; i < state_info.length-1; i++) {
+        stl += "<b>" + state_info[i][1] + "</b>, ";
+    }
+    stl += "and <b>" + state_info[i][1] + "</b>, "
+    return stl;
+}
+
+function PrintStateInfo(idx) {
+    for (i in state_info[idx]) {
+        console.log(i);
+    }
 }
