@@ -8,7 +8,7 @@ var state_info = [
     ["CO", "Colorado", "Denver", 5758736]
 ];
 
-var state_info_lower = state_info.map((r) => console.log(r));// [r[0].toLowerCase(), r[1].toLowerCase()])
+var state_info_lower = state_info.map((r) => console.log([r[0].toLowerCase(), r[1].toLowerCase()]))
 for (r in state_info_lower) {
     console.log(r[0] + "," + r[1]);
 }
