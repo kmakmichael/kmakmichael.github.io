@@ -50,7 +50,7 @@ function ListStates() {
 function PrintStateInfo(idx) {
     let sinfo =  state_info[idx];
     let istr = "Thanks for your inquiry, here is the information you requested:<br />";
-    for (let i = 0; i <.length; i++) {
+    for (let i = 0; i < sinfo.length; i++) {
         istr += "State abbr = <b>" + sinfo[0] + "</b><br />";
         istr += "State name = <b>" + sinfo[1] + "</b><br />";
         istr += "Capital = <b>" + sinfo[2] + "</b><br />";
