@@ -1,5 +1,4 @@
-DoThings();
 
-function DoThings() {
-    console.log("part 2");
+function goToNewPage(frm) {
+    console.log(frm);
 }
