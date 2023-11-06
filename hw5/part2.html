@@ -29,9 +29,25 @@
         </ul>
     </div>
     <div id="content">
-        <h1>Thing</h1>
-        
-        <a href="/hw5.html"><h3>Back to HW5</h3></a>
+        <h1>Part 2: Dropdown Menus</h1>
+        <form>
+            <label for="destListOnchange">onchange</label>
+            <select name="destListOnchange" onchange="goToNewPage(this.form);">
+                <option value="http://www.yahoo.com/">Yahoo</option>
+                <option value="http://www.w3.org/">W3C</option>
+                <option value="http://www.mozilla.org/">Mozilla</option>
+                <option value="http://www.ccsf.edu/cnit">CNIT</option>
+            </select>
+            <label for="destListOnclick">onclick</label>
+            <select name="destListOnclick" onchange="goToNewPage(this.form);">
+                <option value="http://www.yahoo.com/">Yahoo</option>
+                <option value="http://www.w3.org/">W3C</option>
+                <option value="http://www.mozilla.org/">Mozilla</option>
+                <option value="http://www.ccsf.edu/cnit">CNIT</option>
+            </select>
+        </form>
+        <input type="button" onclick="goToNewPage(this.form)" value="Go"/>
+        <h3><a href="/hw5.html">Back to HW5</a></h3>
     </div>
 </body>
 </html>
