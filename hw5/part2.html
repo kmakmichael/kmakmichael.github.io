@@ -30,23 +30,25 @@
     </div>
     <div id="content">
         <h1>Part 2: Dropdown Menus</h1>
-        <form name="navform">
-            <label for="destListOnchange">onchange</label>
-            <select name="destListOnchange" onchange="goToNewPage(this.form);">
+        <form>
+            <label for="destList">onchange</label>
+            <select name="destList" onchange="goToNewPage(this.form);">
                 <option value="http://www.yahoo.com/">Yahoo</option>
                 <option value="http://www.w3.org/">W3C</option>
                 <option value="http://www.mozilla.org/">Mozilla</option>
                 <option value="http://www.ccsf.edu/cnit">CNIT</option>
             </select><br />
-            <label for="destListOnclick">onclick</label>
-            <select name="destListOnclick">
+        </form>
+        <form>
+            <label for="destList">onclick</label>
+            <select name="destList">
                 <option value="http://www.yahoo.com/">Yahoo</option>
                 <option value="http://www.w3.org/">W3C</option>
                 <option value="http://www.mozilla.org/">Mozilla</option>
                 <option value="http://www.ccsf.edu/cnit">CNIT</option>
             </select>
+            <input type="button" onclick="goToNewPage(this.form);" value="Go"/>
         </form>
-        <input type="button" onclick="goToNewPage(this.form);" value="Go"/>
         <h3><a href="/hw5.html">Back to HW5</a></h3>
     </div>
 </body>
