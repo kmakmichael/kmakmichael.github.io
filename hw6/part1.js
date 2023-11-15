@@ -11,4 +11,6 @@ f.onsubmit = (event) => {
     msg += `Rounded to the nearest 10th: ${num.toFixed(1)}`;
     msg += `Rounded to the nearest 100th: ${num.toFixed(2)}`;
     msg += `Rounded to the nearest 1000th: ${num.toFixed(3)}`;
+
+    f.elements["txt_out"].value = msg;
 }
