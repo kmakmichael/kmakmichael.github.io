@@ -1,4 +1,5 @@
 var f = document.forms[0];
+f.elements["num_in"].setCustomValidity("Please enter a number with 4 decimal places");
 
 f.onsubmit = (event) => {
     event.preventDefault();
