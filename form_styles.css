@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+label {
+    color: #b5f5ff;
+}
+
+input:valid {
+    box-shadow: none;
+    outline: 1px solid black;
+}
+
+input:invalid {
+    box-shadow: 5px 5px 10px red;
+    outline: 1px solid red;
+}
