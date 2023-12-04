@@ -11,9 +11,9 @@ for (let i = 0; i < rads.length; i ++) {
 let chk = f.elements["st_b"];
 chk.addEventListener("change", (event) => {
     if (chk.checked) {
-        console.log("unchecking");
+        $(".dynatext").css("font-weight", "bold");
     } else {
-        console.log("checking");
+        $(".dynatext").css("font-weight", "normal")
     }
 });
 
