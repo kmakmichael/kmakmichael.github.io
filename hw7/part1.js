@@ -1,12 +1,12 @@
 var f = document.forms[0];
 
-for (rad in f.elements["bg"]) {
-    rad.addEventListener("change", (event) => {
+for (let i = 0; i < f.elements["bg"].length; i ++) {
+    f.elements["bg"][i].addEventListener("change", (event) => {
         console.log("changing background");
     });
 }
 
 
-f.st_b.addEventListener("change", (event) => {
+f.elements["st_b"].addEventListener("change", (event) => {
     console.log("bolding");
 });
