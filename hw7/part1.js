@@ -33,6 +33,5 @@ e["st_u"].addEventListener("change", (event) => {
 
 // Font Size
 e["fs"].addEventListener("change", (event) => {
-    console.log(e["fs"].options[e["fs"].selectedIndex].value)
     $(".dynatext").css("font-size", e["fs"].options[e["fs"].selectedIndex].value);
 })
