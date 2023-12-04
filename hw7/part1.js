@@ -1,13 +1,13 @@
-var f = document.forms[0];
+var e = document.forms[0].elements;
 
-let rads = f.elements["bg"];
+let rads = e["bg"];
 for (let i = 0; i < rads.length; i ++) {
     rads[i].addEventListener("change", (event) => {
         $("#dynabox").css("background-color", rads[i].value);
     });
 }
 
-let chk = f.elements["st_b"];
+let chk = e["st_b"];
 chk.addEventListener("change", (event) => {
     if (chk.checked) {
         $(".dynatext").css("font-weight", "bold");
@@ -15,7 +15,7 @@ chk.addEventListener("change", (event) => {
         $(".dynatext").css("font-weight", "normal")
     }
 });
-let chk = f.elements["st_i"];
+chk = e["st_i"];
 chk.addEventListener("change", (event) => {
     if (chk.checked) {
         $(".dynatext").css("font-style", "italic");
@@ -23,7 +23,7 @@ chk.addEventListener("change", (event) => {
         $(".dynatext").css("font-style", "normal")
     }
 });
-let chk = f.elements["st_u"];
+chk = e["st_u"];
 chk.addEventListener("change", (event) => {
     if (chk.checked) {
         $(".dynatext").css("text-decoration", "underline");
@@ -32,7 +32,7 @@ chk.addEventListener("change", (event) => {
     }
 });
 
-let sel = f.elements["fs"];
+let sel = e["fs"];
 sel.addEventListener("change", (event) => {
-    console.log(`changing to ${sel.options[sel.selectedIndex].value}`)
+    $("#dynatext").css("font-size", sel.options[sel.selectedIndex].value);
 })
