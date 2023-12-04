@@ -3,6 +3,7 @@ var f = document.forms[0];
 f.onsubmit = (event) => {
     event.preventDefault();
     let val = f.elements["num_in"].value;
+    console.log(val)
     if (val.trim().search("^\d*\.\d\d\d\d+$") != -1) {
         let num = parseFloat(val);
         msg = `You typed ${val}`
