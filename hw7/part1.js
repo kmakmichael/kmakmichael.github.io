@@ -3,7 +3,7 @@ var f = document.forms[0];
 let rads = f.elements["bg"];
 for (let i = 0; i < rads.length; i ++) {
     rads[i].addEventListener("change", (event) => {
-        document.querySelector("#dynabox").style.backgroundColor = rads[i].value;
+        $("#dynabox").css("background-color", rads[i].value);
     });
 }
 
@@ -13,6 +13,22 @@ chk.addEventListener("change", (event) => {
         $(".dynatext").css("font-weight", "bold");
     } else {
         $(".dynatext").css("font-weight", "normal")
+    }
+});
+let chk = f.elements["st_i"];
+chk.addEventListener("change", (event) => {
+    if (chk.checked) {
+        $(".dynatext").css("font-style", "italic");
+    } else {
+        $(".dynatext").css("font-style", "normal")
+    }
+});
+let chk = f.elements["st_u"];
+chk.addEventListener("change", (event) => {
+    if (chk.checked) {
+        $(".dynatext").css("text-decoration", "underline");
+    } else {
+        $(".dynatext").css("text-decoration", "none")
     }
 });
 
