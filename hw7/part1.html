@@ -30,13 +30,34 @@
     </div>
     <div id="content">
         <h1>Part 1: Dynamic Styles</h1>
+        <p>This is the first paragraph.</p>
+        <p>This is the second paragraph.</p>
+        <p>This is the third paragraph.</p>
         <form>
-            <input type="reset"><br />
-            <label for="num_in">Input Number: </label>
-            <input required type="text" pattern="\d*\.\d\d\d\d+" placeholder="42.1234" name="num_in"><br />
-            <input type="submit"><br />
-            <textarea readonly rows="6" cols="63" name="txt_out">
-            </textarea>
+            <label for="bg">Background Color: </label><br />
+            <input type="radio" name="bg" value="bg_default">
+            <label far="bg">Default</label><br />
+            <input type="radio" name="bg" value="bg_blue">
+            <label far="bg">Blue</label><br />
+            <input type="radio" name="bg" value="bg_pink">
+            <label far="bg">Pink</label><br />
+            <input type="radio" name="bg" value="bg_yellow">
+            <label for="bg">Yellow</label><br />
+            
+            <br /><label for="st">Font Style</label><br />
+            <input type="checkbox" name="st_b">
+            <label for="st_b">Bold</label><br />
+            <input type="checkbox" name="st_i">
+            <label for="st_i">Italic</label><br />
+            <input type="checkbox" name="st_u">
+            <label for="st_u">Underline</label><br />
+            
+            <br /><label for="fs">Font Size</label><br />
+            <select name="fs">
+                <option value="0.75em">0.75em</option>
+                <option value="1.0em">1.0em</option>
+                <option value="1.25em">1.25em</option>
+            </select>
         </form>
         <h3><a href="/hw7.html">Back to HW7</a></h3>
     </div>
