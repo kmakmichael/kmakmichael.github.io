@@ -1,12 +1,23 @@
 var f = document.forms[0];
 
-for (let i = 0; i < f.elements["bg"].length; i ++) {
-    f.elements["bg"][i].addEventListener("change", (event) => {
+let rads = elements["bg"];
+for (let i = 0; i < rads.length; i ++) {
+    rads[i].addEventListener("change", (event) => {
         console.log("changing background");
+        document.querySelector("#dynabox").style.backgroundColor = rads[i].value;
     });
 }
 
-
-f.elements["st_b"].addEventListener("change", (event) => {
-    console.log("bolding");
+let chk = f.elements["st_b"];
+chk.addEventListener("change", (event) => {
+    if (chk.checked) {
+        console.log("unchecking");
+    } else {
+        console.log("checking");
+    }
 });
+
+let sel = f.elements["fs"];
+sel.addEventListener("change", (event) => {
+    console.log(`changing to ${sel.options[sel.selectedIndex].value}`)
+})
