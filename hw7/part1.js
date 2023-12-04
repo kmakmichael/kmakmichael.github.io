@@ -1,6 +1,6 @@
 var f = document.forms[0];
 
-f.elements["bg"].addEventListener("change", (event) => {
+f.bg.addEventListener("change", (event) => {
     console.log("changing background");
 });
 
