@@ -1,6 +1,6 @@
 var f = document.forms[0];
 
-let rads = elements["bg"];
+let rads = f.elements["bg"];
 for (let i = 0; i < rads.length; i ++) {
     rads[i].addEventListener("change", (event) => {
         console.log("changing background");
