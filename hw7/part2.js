@@ -17,11 +17,11 @@ function ReadCookies() {
     let c = {};
     for (const str of matches) {
         console.log(str);
-        /*let spl = str.split("=");
+        let spl = str[0].split("=");
         if (spl[0] != "path") {
             c[spl[0]] = spl[1];
             console.log(`${spl[0]} = ${spl[1]}`);
-        } */
+        }
     }
     return c;
 }
