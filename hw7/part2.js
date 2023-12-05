@@ -12,6 +12,7 @@ function CreateCookie(name, val) {
 }
 
 function ReadCookies() {
+    console.log("reading");
     let matches = decodeURIComponent(document.cookie).matchAll("[^;]+=[^;]+;");
     console.log(document.cookie);
     console.log(decodeURIComponent(document.cookie));
