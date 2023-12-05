@@ -7,7 +7,7 @@ if ("name" in cookies && "username" in cookies) {
 }
 
 function CreateCookie(name, val) {
-    document.cookie = `${name}=${val};`;
+    document.cookie = encodeURIComponent(`${name}=${val};`);
     console.log(`Writing ${name}=${val};`);
 }
 
@@ -18,7 +18,7 @@ function ReadCookies() {
         let spl = str[0].split("=");
         if (spl[0] != "path") {
             c[spl[0]] = spl[1];
-            console.log(`${spl[0]} = ${spl[1]}`);
+            console.log(`${spl[0].trim()} = ${spl[1].trim()}`);
         }
     }
     console.log(c);
