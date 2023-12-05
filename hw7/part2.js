@@ -14,8 +14,7 @@ function CreateCookie(name, val) {
 function ReadCookies() {
     console.log("reading");
     let matches = decodeURIComponent(document.cookie).matchAll(/[^;]+=[^;]+/g);
-    console.log(document.cookie);
-    console.log(decodeURIComponent(document.cookie));
+    console.log(matches);
     let c = {};
     for (const str of matches) {
         let spl = str.split("=");
