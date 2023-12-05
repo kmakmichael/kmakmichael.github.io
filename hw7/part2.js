@@ -16,8 +16,8 @@ function ReadCookies() {
     let matches = decodeURIComponent(document.cookie).matchAll(/[^;]+=[^;]+/g);
     for (const str of matches) {
         let spl = str[0].split("=");
-        if (spl[0] != "path") {
-            c[spl[0]] = spl[1];
+        if (spl[0].trim() != "path") {
+            c[spl[0].trim()] = spl[1].trim();
             console.log(`${spl[0].trim()} = ${spl[1].trim()}`);
         }
     }
