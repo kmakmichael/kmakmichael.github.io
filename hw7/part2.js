@@ -17,7 +17,7 @@ function ReadCookies() {
     console.log(document.cookie);
     console.log(decodeURIComponent(document.cookie));
     let c = {};
-    for (str in matches) {
+    for (const str of matches) {
         let [k,v] = str.split("=");
         if (k != "path") {
             c[k] = v;
