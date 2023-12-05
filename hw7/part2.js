@@ -12,17 +12,16 @@ function CreateCookie(name, val) {
 }
 
 function ReadCookies() {
-    let matches = decodeURIComponent(document.cookie).matchAll(/[^;]+=[^;]+/g);
-    console.log(matches);
     let c = {};
+    let matches = decodeURIComponent(document.cookie).matchAll(/[^;]+=[^;]+/g);
     for (const str of matches) {
-        console.log(str);
         let spl = str[0].split("=");
         if (spl[0] != "path") {
             c[spl[0]] = spl[1];
             console.log(`${spl[0]} = ${spl[1]}`);
         }
     }
+    console.log(c);
     return c;
 }
 
