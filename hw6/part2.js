@@ -9,8 +9,9 @@ $("form").on("submit", () => {
 function Find(n, h) {
     let m = -1;
     let idx = 0;
+    let s = h;
     do {
-        h = h.substring(idx);
+        s = s.substring(idx+1);
         idx = h.indexOf(n);
         ++m;
         console.log(`found ${n} at ${idx} of ${h}`);
