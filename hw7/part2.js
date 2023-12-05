@@ -1,5 +1,5 @@
-CreateCookie("name", nm_ck);
-CreateCookie("username", un_ck);
+CreateCookie("name", "Stephano");
+CreateCookie("username", "steffy2011");
 ReadCookies();
 
 
