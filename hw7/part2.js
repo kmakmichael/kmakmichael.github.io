@@ -3,12 +3,12 @@ var cookies = ReadCookies();
 $(document).ready(() => {
     if ("name" in cookies && "username" in cookies) {
         $("#cookiebox").html(`<p>Welcome back, ${cookies.name}</p>`);
+    } else {
+        $("form").on("submit", (event) => {
+            CreateCookie("name", f.ck_name.value);
+            CreateCookie("username", f.ck_user.value);
+        })
     }
-    
-    $("form").on("submit", (event) => {
-        CreateCookie("name", f.ck_name.value);
-        CreateCookie("username", f.ck_user.value);
-    })
 });
 
 
