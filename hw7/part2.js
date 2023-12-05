@@ -18,10 +18,10 @@ function ReadCookies() {
     console.log(decodeURIComponent(document.cookie));
     let c = {};
     for (const str of matches) {
-        let [k,v] = str.split("=");
-        if (k != "path") {
-            c[k] = v;
-            console.log(`${k} = ${v}`);
+        let spl = str.split("=");
+        if (spl[0] != "path") {
+            c[spl[0]] = spl[1];
+            console.log(`${spl[0]} = ${spl[1]}`);
         }
     }
     return c;
