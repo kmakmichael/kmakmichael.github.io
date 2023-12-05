@@ -11,9 +11,9 @@ function Find(n, h) {
     let idx = 0;
     do {
         h = h.substring(idx);
-        console.log(`finding ${n} in ${h}`);
         idx = h.indexOf(n);
         ++m;
+        console.log(`found ${n} at ${idx} of ${h}`);
     } while (idx > -1)
     return m;
 }
