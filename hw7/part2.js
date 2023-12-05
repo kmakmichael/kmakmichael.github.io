@@ -1,11 +1,21 @@
+CreateCookie("name", nm_ck);
+CreateCookie("username", un_ck);
+ReadCookies();
 
-let nm_ck = {name = "Stephano" };
-let un_ck = { username = "steffy2011"};
-CreateCookie(nm_ck);
-CreateCookie(un_ck);
 
-function CreateCookie(vals) {
-    for (const [key, value] of Object.entries(vals)) {
-        console.log(`${key}: ${value}`);
+
+function CreateCookie(name, val) {
+    document.cookie = `${name}=${val};`;
+    console.log(`Writing ${name}=${val};`);
+}
+
+function ReadCookies() {
+    let matches = decodeURIComponent(document.cookie).matchAll("[^;]+=[^;]+;");
+    for (str in matches) {
+        let [k,v] = str.split("=");
+        console.log(`${k} = ${v}`);
     }
+}
+function GetCookie(cookies) {
+
 }
