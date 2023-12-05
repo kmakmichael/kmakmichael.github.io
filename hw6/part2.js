@@ -1,7 +1,7 @@
-
-function goToNewPage(myForm) {
-    var mydest = myForm.destList.options[myForm.destList.selectedIndex].value;
-    if (mydest != "") {
-        window.open(mydest, '_blank');
-    }
-}
+$("form").on("submit", () => {
+    event.preventDefault();
+    let needle = $("input#needle").val();
+    let haystack = $("textarea#haystack").val();
+    let matches = haystack.matchAll(`/${needle}/g`);
+    console.log(`${matches}`);
+});
