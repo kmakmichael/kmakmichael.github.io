@@ -3,7 +3,6 @@ var cookies = ReadCookies();
 if ("name" in cookies && "username" in cookies) {
     let cb = document.querySelector("#cookiebox");
     cb.innerHTML = `<p>Welcome back, ${cookies.name}</p>`;
-    document.querySelector("#entryform").hidden = true;
 }
 
 function CreateCookie(name, val) {
@@ -18,10 +17,8 @@ function ReadCookies() {
         let spl = str[0].split("=");
         if (spl[0].trim() != "path") {
             c[spl[0].trim()] = spl[1].trim();
-            console.log(`${spl[0].trim()} = ${spl[1].trim()}`);
         }
     }
-    console.log(c);
     return c;
 }
 
