@@ -2,7 +2,7 @@ $("form").on("submit", () => {
     event.preventDefault();
     let needle = $("input#needle").val();
     let haystack = $("textarea#haystack").val();
-    let m = Find(needle, haystack);
+    let m = Find(needle.toLowerCase(), haystack.toLowerCase());
     if (m > 0) {
         $("p#printout").text(`Found ${needle} ${m} times in text.`);
     } else {
