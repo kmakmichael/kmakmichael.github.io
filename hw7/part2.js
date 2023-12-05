@@ -5,11 +5,10 @@ $(document).ready(() => {
         $("#cookiebox").html(`<p>Welcome back, ${cookies.name}</p>`);
     }
     
-    var f = document.forms[0]
-    f.onsubmit = (event) => {
+    $("form").on("submit", (event) => {
         CreateCookie("name", f.ck_name.value);
         CreateCookie("username", f.ck_user.value);
-    }
+    })
 });
 
 
