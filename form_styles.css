@@ -5,13 +5,11 @@ label {
 }
 
 input[type=text]:valid {
-    color: green;
     box-shadow: 0px 0px 2px green;
     outline: 1px solid green;
 }
 
 input[type=text]:invalid {
-    color: red;
     box-shadow: 0px 0px 5px red;
     outline: 1px solid red;
 }
