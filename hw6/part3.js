@@ -1,5 +1,5 @@
 $("document").ready(() => {
-    $("input#pnum").inputmask("(xxx) xxx-xxxx");
+    $("input#pnum").mask("(000) 000-0000");
 });
 
 $("form").on("submit", () => {
