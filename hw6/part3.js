@@ -3,5 +3,6 @@ $("document").ready(() => {
 });
 
 $("form").on("submit", () => {
+    event.preventDefault();
     console.log($("input#pnum").val());
 })

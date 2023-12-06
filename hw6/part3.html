@@ -35,13 +35,13 @@
         <h1>Part 3: Phone Split</h1>
         <form>
             <label for="pnum">Enter Phone Number:</label>
-            <input type="text" name="pnum" id="pnum" placeholder="(123) 456-789" required><br /><br />
+            <input required type="text" name="pnum" id="pnum" placeholder="(123) 456-789" pattern="[0-9]{10}" maxlength="10"><br /><br />
             <label for="area">Area Code:</label>
-            <input readonly type="number" name="area" id="area" size="3"><br />
+            <input readonly type="text" name="area" id="area" size="3"><br />
             <lable for="prefix">Prefix:</lable>
-            <input readonly type="number" name="prefix" id="prefix" size="3"><br />
+            <input readonly type="text" name="prefix" id="prefix" size="3"><br />
             <label for="line">Line:</label>
-            <input readonly type="number" name="line" id="line" size="4"><br />
+            <input readonly type="text" name="line" id="line" size="4"><br />
         </form>
         <h3><a href="/hw6.html">Back to HW6</a></h3>
     </div>
