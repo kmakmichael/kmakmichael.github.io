@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="../styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js”></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
     <script src="part3.js"></script>
 </head>
 <body>
@@ -35,6 +35,10 @@
         <form>
             <label for="pnum">Enter Phone Number:</label>
             <input type="text" name="pnum" id="pnum" pattern="[0-9]{10}" placeholder="(123) 456-789" required><br />
+            <input readonly type="number" name="area" size="3">
+            <input readonly type="number" name="prefix" size="3">
+            <input readonly type="number" name="line" size="4">
+
         </form>
         <h3><a href="/hw6.html">Back to HW6</a></h3>
     </div>
