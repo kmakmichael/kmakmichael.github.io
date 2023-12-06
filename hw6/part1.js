@@ -3,8 +3,8 @@ var f = document.forms[0];
 f.onsubmit = (event) => {
     event.preventDefault();
     let val = f.elements["num_in"].value;
-    console.log(val)
-    if (val.trim().search("^[0-9]+\.[0-9]{4,}]$") != -1) {
+    console.log(val.trim());
+    if (val.trim().search("^[0-9]+\.[0-9]{4,}$") != -1) {
         let num = parseFloat(val);
         msg = `You typed ${val}`
         msg += `\nRounded to the nearest integer: ${num.toFixed()}`;
