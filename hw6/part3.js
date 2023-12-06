@@ -2,7 +2,7 @@ $("document").ready(() => {
     $("input#pnum").mask("(000) 000-0000");
 });
 
-$("form").on("submit", () => {
+$("form").on("submit", (event) => {
     event.preventDefault();
     console.log($("input#pnum").val().trim());
     let match = $("input#pnum").val().trim().match(/\(([0-9]{3})\) ([0-9]{3})-([0-9]{4})/);
