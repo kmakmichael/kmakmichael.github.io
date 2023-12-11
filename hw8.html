@@ -104,8 +104,16 @@
                     req += `&y=${encodeURIComponent(year)}`;
                 }
                 console.log(req);
+
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    recv(this);
+                }
+                xhttp.open("GET", req);
+                xhttp.send();
             }
             function recv(r) {
+                console.log(r);
             }
         </script>
         <h3>Search Results (10):</h3>
