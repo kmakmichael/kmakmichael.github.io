@@ -82,16 +82,34 @@
         <h2>OMDb search</h2>
         <form name="omdb">
             <label for="title">Title:</label>
-            <input type="text" name="title" id="title" placeholder="Title"><br />
+            <input type="text" name="title" id="title" placeholder="Title" required><br />
             <label for="year">Year:</label>
             <input type="text" name="year" id="year" pattern="[0-9]{4}" placeholder="Year"><br />
             <input type="submit">
             <input type="reset">
         </form>
         <script>
-            
+            var key = "3eee36af"; // do NOT do this in a real application
+            var f = document.forms["omdb"];
+            f.onsubmit = (event) => {
+                event.preventDefault();
+                let title = f.elements["title"].value;
+                let year = f.elements["year"].value;
+                if (title == "" && year == "") {
+                    document.querySelector("div#results").innerHTML = "<p>Enter a title or year to search for</p>";
+                    return;
+                }
+                let req = `http://www.omdbapi.com/?apikey=${key}&s=${encodeURIComponent(title)}`;
+                if (year != "") {
+                    req += `&y=${encodeURIComponent(year)}`;
+                }
+                console.log(req);
+            }
+            function recv(r) {
+            }
         </script>
         <h3>Search Results (10):</h3>
+        <div id="results"></div>
         <br /><h3><a href="/index.html">Back to Home</a></h3>
     </div>
 </body>
