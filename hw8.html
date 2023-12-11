@@ -121,7 +121,7 @@
                 const xml = r.responseXML;
                 let err = xml.querySelector("Error");
                 console.log(xml.documentElement.attributes);
-                if (xml.documentElement.attributes["response"]) {
+                if (xml.documentElement.attributes["response"].value) {
                     console.log("we good");
                 } else {
                     console.log("not so good");
