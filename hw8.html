@@ -99,7 +99,7 @@
                     document.querySelector("div#results").innerHTML = "<p>Enter a title or year to search for</p>";
                     return;
                 }
-                let req = `http://www.omdbapi.com/?apikey=${key}&s=${encodeURIComponent(title)}`;
+                let req = `//www.omdbapi.com/?apikey=${key}&s=${encodeURIComponent(title)}`;
                 if (year != "") {
                     req += `&y=${encodeURIComponent(year)}`;
                 }
