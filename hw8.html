@@ -117,6 +117,7 @@
                 xhttp.send();
             }
             function recv(r) {
+                console.log(r);
                 const xml = r.responseXML;
                 if (xml.querySelector("Error") != null) {
 
