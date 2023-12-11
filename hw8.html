@@ -120,13 +120,14 @@
                 console.log(r);
                 const xml = r.responseXML;
                 if (xml.documentElement.attributes["response"].value == "False") {
-                    console.log(xml.querySelector("error"));
+                    feedback.innerHTML = `<p>${xml.querySelector("error").textContent}</p>`;
                 } else {
-                    console.log("we good good");
+                    let mov = xml.querySelector("movie");
+                    console.log(mov);
                 }
             }
         </script>
-        <h3>Search Results (10):</h3>
+        <h3>Search Results:</h3>
         <div id="results"></div>
         <br /><h3><a href="/index.html">Back to Home</a></h3>
     </div>
