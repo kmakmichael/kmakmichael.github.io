@@ -91,23 +91,22 @@
         <script>
             var key = "3eee36af"; // do NOT do this in a real application
             var f = document.forms["omdb"];
-            var feedback = document.querySelector("div#results");
             f.onreset = (event) => {
-                feedback.innerHTML = "";
+                document.querySelector("div#results").innerHTML = "";
             }
             f.onsubmit = (event) => {
                 event.preventDefault();
                 let title = f.elements["title"].value;
                 let year = f.elements["year"].value;
                 if (title == "" && year == "") {
-                    feedback.innerHTML = "<p>Enter a title or year to search for</p>";
+                    document.querySelector("div#results").innerHTML = "<p>Enter a title or year to search for</p>";
                     return;
                 }
                 let req = `https://www.omdbapi.com/?apikey=${key}&t=${encodeURIComponent(title)}&r=xml`;
                 if (year != "") {
                     req += `&y=${encodeURIComponent(year)}`;
                 }
-                console.log(req);
+                // console.log(req);
 
                 const xhttp = new XMLHttpRequest();
                 xhttp.onload = function() {
@@ -117,13 +116,13 @@
                 xhttp.send();
             }
             function recv(r) {
-                console.log(r);
+                // console.log(r);
                 const xml = r.responseXML;
                 if (xml.documentElement.attributes["response"].value == "False") {
                     document.querySelector("div#results").innerHTML = `<p>${xml.querySelector("error").textContent}</p>`;
                 } else {
                     let mov = xml.querySelector("movie");
-                    console.log(mov);
+                    // console.log(mov);
                     let t = mov.attributes.title.value;
                     let y = mov.attributes.year.value;
                     let r = mov.attributes.runtime.value;
