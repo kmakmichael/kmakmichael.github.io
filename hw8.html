@@ -119,7 +119,8 @@
             function recv(r) {
                 console.log(r);
                 const xml = r.responseXML;
-                console.log(xml.querySelector("Error"))
+                let err = xml.querySelector("Error");
+                document.log(document.documentElement.attributes.response);
             }
         </script>
         <h3>Search Results (10):</h3>
