@@ -58,11 +58,13 @@
             page. </thead>The <code>XMLHttpRequest</code> class is core to this process, 
             defining a request to an internal or external web server. This request (ideally) will
             load XML data from the file <code>hw8/cd_catalog.xml</code> and send it. The request is 
-            created with the <code>opne()</code> function and sent with <code>send()</code>.
+            created with the <code>open()</code> function and sent with <code>send()</code>.
             <code>send()</code> will return immediately without waiting for the result of the GET request.
             The data received will instead be processed by the <code>onload</code> function defined
             earlier. <code>myFunction()</code> will be passed the result of the request and pulls a set
-            of tags from the XML document. These tags are processed and added to the DOM.
+            of tags from the XML document. These tags are processed and added to the DOM. This process
+            allows code execution to continue elsewhere while the XML data is fetched, rather than having
+            to wait for the XML data to be processed first.
         </p>
         <h2>REST API: OMDb</h2>
         <p>
