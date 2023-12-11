@@ -121,6 +121,11 @@
                 const xml = r.responseXML;
                 let err = xml.querySelector("Error");
                 document.log(document.documentElement.attributes.response);
+                if (document.documentElement.attributes.response) {
+                    console.log("we good");
+                } else {
+                    console.log("not so good");
+                }
             }
         </script>
         <h3>Search Results (10):</h3>
