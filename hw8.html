@@ -119,11 +119,7 @@
             function recv(r) {
                 console.log(r);
                 const xml = r.responseXML;
-                if (xml.querySelector("Error") != null) {
-
-                } else {
-                    feedback.innerHTML = `<p>${xml.querySelector("Error").textContent}</p>`;
-                }
+                console.log(xml.querySelector("Error"))
             }
         </script>
         <h3>Search Results (10):</h3>
