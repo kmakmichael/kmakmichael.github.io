@@ -52,7 +52,17 @@
         }
         </script>
         <h2>Explanation of Ajax</h2>
-        <p>it just works&#8482</p>
+        <p>
+            Ajax allows a webpage to dynamically update its content without refreshing the entire
+            page. </thead>The <code>XMLHttpRequest</code> class is core to this process, 
+            defining a request to an internal or external web server. This request (ideally) will
+            load XML data from the file <code>hw8/cd_catalog.xml</code> and send it. The request is 
+            created with the <code>opne()</code> function and sent with <code>send()</code>.
+            <code>send()</code> will return immediately without waiting for the result of the GET request.
+            The data received will instead be processed by the <code>onload</code> function defined
+            earlier. <code>myFunction()</code> will be passed the result of the request and pulls a set
+            of tags from the XML document. These tags are processed and added to the DOM.
+        </p>
         <h2>REST API</h2>
         <p>they're all bad just do your work offline</p>
         <br /><h3><a href="/index.html">Back to Home</a></h3>
