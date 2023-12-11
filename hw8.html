@@ -91,12 +91,16 @@
         <script>
             var key = "3eee36af"; // do NOT do this in a real application
             var f = document.forms["omdb"];
+            var feedback = document.querySelector("div#results");
+            f.onreset = (event) => {
+                feedback.innerHTML = "";
+            }
             f.onsubmit = (event) => {
                 event.preventDefault();
                 let title = f.elements["title"].value;
                 let year = f.elements["year"].value;
                 if (title == "" && year == "") {
-                    document.querySelector("div#results").innerHTML = "<p>Enter a title or year to search for</p>";
+                    feedback.innerHTML = "<p>Enter a title or year to search for</p>";
                     return;
                 }
                 let req = `https://www.omdbapi.com/?apikey=${key}&s=${encodeURIComponent(title)}`;
@@ -113,7 +117,12 @@
                 xhttp.send();
             }
             function recv(r) {
-                console.log(r);
+                const xml = r.responseXML;
+                if (xml.querySelector("Error") != null) {
+
+                } else {
+                    feedback.innerHTML = `<p>${xml.querySelector("Error").textContent}</p>`;
+                }
             }
         </script>
         <h3>Search Results (10):</h3>
