@@ -120,7 +120,7 @@
                 console.log(r);
                 const xml = r.responseXML;
                 if (xml.documentElement.attributes["response"].value == "False") {
-                    feedback.innerHTML = `<p>${xml.querySelector("error").textContent}</p>`;
+                    document.querySelector("div#results").innerHTML = `<p>${xml.querySelector("error").textContent}</p>`;
                 } else {
                     let mov = xml.querySelector("movie");
                     console.log(mov);
@@ -128,7 +128,7 @@
                     let y = mov.attributes.year.value;
                     let r = mov.attributes.runtime.value;
                     let p = mov.attributes.plot.value;
-                    feedback.innerHTML = `<h3>${t} (${y}) <sub>${r}</sub><h3><p>${p}</p>`;
+                    document.querySelector("div#results").innerHTML = `<h3>${t} (${y}) <sub>${r}</sub><h3><p>${p}</p>`;
                 }
             }
         </script>
