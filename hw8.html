@@ -103,7 +103,7 @@
                     feedback.innerHTML = "<p>Enter a title or year to search for</p>";
                     return;
                 }
-                let req = `https://www.omdbapi.com/?apikey=${key}&s=${encodeURIComponent(title)}`;
+                let req = `https://www.omdbapi.com/?apikey=${key}&s=${encodeURIComponent(title)}&r=xml`;
                 if (year != "") {
                     req += `&y=${encodeURIComponent(year)}`;
                 }
