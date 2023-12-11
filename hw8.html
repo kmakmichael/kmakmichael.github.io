@@ -120,7 +120,7 @@
                 console.log(r);
                 const xml = r.responseXML;
                 let err = xml.querySelector("Error");
-                document.log(document.documentElement.attributes.response);
+                console.log(document.documentElement.attributes.response);
                 if (document.documentElement.attributes.response) {
                     console.log("we good");
                 } else {
