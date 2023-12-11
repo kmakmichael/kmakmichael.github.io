@@ -124,10 +124,14 @@
                 } else {
                     let mov = xml.querySelector("movie");
                     console.log(mov);
+                    let t = mov.attributes.title.value;
+                    let y = mov.attributes.year.value;
+                    let r = mov.attributes.runtime.value;
+                    let p = mov.attributes.plot.value;
+                    feedback.innerHTML = `<h3>${t} (${y}) <sub>${r}</sub><h3><p>${p}</p>`;
                 }
             }
         </script>
-        <h3>Search Results:</h3>
         <div id="results"></div>
         <br /><h3><a href="/index.html">Back to Home</a></h3>
     </div>
